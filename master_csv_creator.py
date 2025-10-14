@@ -12,7 +12,7 @@ def combine_csv_files(dir_path, output_file):
 
     for i in range(1, len(file_list)):
         file = file_list[i]
-        file_path = Path("CTG_CSV_Data\\2003-04") / file
+        file_path = Path(dir_path) / file
         df = pd.read_csv(file_path)
         df = df.drop(columns=common_keys)
         for key in shooting_common_keys:
@@ -31,7 +31,8 @@ def combine_csv_files(dir_path, output_file):
                 })
         master_df = pd.concat([master_df, df], axis=1)
 
-
+    cols_to_keep = common_keys + [col for col in master_df.columns if col.endswith('Rank')]
+    master_df = master_df[cols_to_keep]
     print(f"Total columns in master dataframe: {len(master_df.columns)}")    
     master_df.to_csv(f"merged_csvs/{output_file}", index=False)
 
