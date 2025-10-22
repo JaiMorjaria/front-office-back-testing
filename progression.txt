@@ -1,0 +1,34 @@
+First regression attempt:
+
+Had dupe columns (efg%, onoff efg%, ft%) being duplicated across csv files
+Tried to just run lasso on 300 features, got nonsense results
+
+Second attempt:
+
+Tried to use MI, got dupe features and some features dropped entirely
+Tried to force MI to pick one per skill group, got weird answers
+Regression also gave me super low, nonsense weights
+
+Third attempt:
+
+Tried to use just the _weighted category, went better. Got the following top 10:
+efg%_rank_weighted                                       0.070552
+usage_rank_weighted                                      0.057202
+astd%_rim_overall_rank_weighted                          0.033969
+blk%_rank_weighted                                       0.021510
+rim_frequency_rank_weighted                              0.016145
+long_mid_accuracy_rank_weighted                          0.015431
+onoff_team_team_fg%:_rim_rank_weighted                   0.014075
+onoff_team_shot_frequency:_corner_three_rank_weighted    0.007845
+corner_three_frequency_rank_weighted                     0.007836
+offense:_ft_rate_rank_weighted                           0.002994
+
+Still super low weights but supports four factors a bit more. Long mid also makes sense because of 2000s noise + salary/shot map
+
+Fourth attempt:
+
+Using simple spearman correlation to select feature category, then running lasso. Definitely not final attempt but useful to compare w/ raw weighted run
+
+Fifth attempt:
+
+Using random forest on spearman correlation selected categories, then running lasso
