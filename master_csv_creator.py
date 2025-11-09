@@ -2,6 +2,10 @@ import pandas as pd
 import os
 from pathlib import Path
 
+def drop_pts_per_poss_columns(df):
+    df = df.drop(columns=['Pts/Poss', 'Pts/Poss Rank']) 
+    return df
+
 def combine_csv_files(dir_path, output_file):    
     file_list = [f for f in os.listdir(dir_path) if f.endswith('_Regular_Season.csv')]
     first_file_path = Path(dir_path) / file_list[0]
@@ -15,6 +19,8 @@ def combine_csv_files(dir_path, output_file):
         file_path = Path(dir_path) / file
         df = pd.read_csv(file_path)
         df = df.drop(columns=common_keys)
+        if "Four_Factors" not in file:
+            df = df.drop(columns=["Pts/Poss", "Pts/Poss Rank"], errors='ignore')
         for key in shooting_common_keys:
             if key in df.columns and key in master_df.columns:
                 df = df.drop(columns=key)

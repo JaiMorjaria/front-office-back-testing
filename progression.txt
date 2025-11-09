@@ -32,3 +32,129 @@ Using simple spearman correlation to select feature category, then running lasso
 Fifth attempt:
 
 Using random forest on spearman correlation selected categories, then running lasso
+
+
+Try PCA
+Model injuries in data (?)
+Incorporate player pre and post trade delta
+Use salary data for player delta tracking
+
+Sixth attempt:
+
+Removed many redundant features (ending up with 52 total). Using several models to cross check
+
+Without StandardScaler:
+                                              feature  elastic_net     lasso  random_forest   xgboost  avg_importance
+0                                   psa_rank_weighted     0.064726  0.014951       0.097331  0.051483        0.057123
+1                                  efg%_rank_weighted     0.031866  0.003140       0.105288  0.076389        0.054171
+2                                  tov%_rank_weighted     0.040674  0.008483       0.035103  0.029937        0.028549
+3                                  stl%_rank_weighted     0.039807  0.010107       0.036564  0.025782        0.028065
+4                                 foul%_rank_weighted     0.006523  0.005096       0.023724  0.023475        0.014704
+5                   corner_three_rank_impact_weighted     0.013152  0.002760       0.023759  0.018730        0.014600
+6                                  blk%_rank_weighted     0.007826  0.003146       0.025711  0.021286        0.014492
+7   onoff_team_halfcourt_putbacks:_pts/miss_rank_w...     0.015187  0.003595       0.015467  0.023207        0.014364
+8                                 fgdr%_rank_weighted     0.011268  0.007565       0.016956  0.020391        0.014045
+9                                  usage_rank_highest     0.000000  0.009439       0.019490  0.026721        0.013913
+10                    offense:_pts/poss_rank_weighted     0.009797  0.000000       0.021906  0.018549        0.012563
+11                        offense:_efg%_rank_weighted     0.012734  0.001973       0.019214  0.014653        0.012144
+12                              ast:usg_rank_weighted     0.000000  0.000266       0.022357  0.023638        0.011565
+13                            rim_rank_impact_highest     0.000000  0.001391       0.022797  0.020438        0.011156
+14    onoff_team_shot:_short_mid_rank_impact_weighted     0.000000  0.003343       0.016886  0.021478        0.010427
+15                                ftor%_rank_weighted     0.007912  0.001898       0.014728  0.015723        0.010065
+16          onoff_team_shot:_rim_rank_impact_weighted     0.000000  0.000000       0.018138  0.018383        0.009130
+17  onoff_team_halfcourt_putbacks:_plays/miss_rank...     0.000000  0.001934       0.012886  0.021639        0.009115
+18     onoff_team_shot:_long_mid_rank_impact_weighted     0.000000  0.001016       0.015564  0.019858        0.009109
+19  onoff_opp_halfcourt_putbacks:_pts/miss_rank_we...     0.000000  0.000000       0.014139  0.021201        0.008835
+20    onoff_opp_shot:_non_corner_rank_impact_weighted     0.001670  0.002027       0.014210  0.016288        0.008549
+21  onoff_opp_transition_off_steals:_pts+/poss_ran...    -0.002586 -0.000000       0.016551  0.019821        0.008447
+22                     offense:_ft_rate_rank_weighted     0.000000  0.001770       0.013362  0.017577        0.008177
+23                        defense:_orb%_rank_weighted     0.000000 -0.000000       0.013168  0.017974        0.007785
+24                     non_corner_rank_impact_highest     0.000000  0.000513       0.016488  0.013773        0.007694
+25  onoff_opp_halfcourt_putbacks:_plays/miss_rank_...    -0.000208 -0.000000       0.014128  0.016631        0.007638
+26                                  ft%_rank_weighted     0.000000 -0.000000       0.014868  0.015645        0.007628
+27                      long_mid_rank_impact_weighted     0.000000  0.000691       0.014312  0.014228        0.007308
+28           onoff_opp_shot:_rim_rank_impact_weighted     0.000000 -0.000000       0.012732  0.015876        0.007152
+29  onoff_team_transition_off_steals:_pts+/poss_ra...     0.000000  0.000000       0.014134  0.014177        0.007078
+30  onoff_opp_transition_off_live_rebounds:_pts+/p...     0.000000  0.000000       0.012143  0.016010        0.007038
+31  onoff_team_transition_off_live_rebounds:_pts+/...     0.000000  0.000000       0.015523  0.012307        0.006958
+32  onoff_opp_halfcourt_halfcourt:_oreb%_rank_weig...    -0.003701 -0.000000       0.013494  0.017512        0.006827
+33                        defense:_efg%_rank_weighted     0.000000  0.001008       0.012372  0.013758        0.006785
+34                                 fgor%_rank_highest     0.000000  0.003081       0.008370  0.015041        0.006623
+35                  astd%_three_overall_rank_weighted    -0.001991 -0.000000       0.013571  0.014908        0.006622
+36                        offense:_orb%_rank_weighted     0.000000  0.000000       0.011906  0.014469        0.006594
+37                        offense:_tov%_rank_weighted     0.000000  0.000000       0.011923  0.012100        0.006006
+38                    defense:_pts/poss_rank_weighted     0.000000  0.000000       0.010741  0.012850        0.005898
+39  onoff_team_shot:_corner_three_rank_impact_highest    -0.007798 -0.000000       0.014064  0.016597        0.005716
+40     onoff_opp_shot:_short_mid_rank_impact_weighted     0.000000  0.000000       0.012179  0.010512        0.005673
+41                        defense:_tov%_rank_weighted     0.000000  0.000324       0.011735  0.009587        0.005411
+42  onoff_team_halfcourt_halfcourt:_oreb%_rank_wei...     0.000000  0.000000       0.010838  0.008932        0.004942
+43                     defense:_ft_rate_rank_weighted    -0.009577 -0.000292       0.013374  0.015579        0.004771
+44                      short_mid_rank_impact_highest    -0.006669  0.000000       0.011774  0.012066        0.004293
+45       onoff_opp_shot:_long_mid_rank_impact_highest    -0.012653 -0.000257       0.013376  0.015522        0.003997
+46  onoff_opp_shot:_corner_three_rank_impact_weighted    -0.011545 -0.000000       0.012468  0.012443        0.003342
+47                                 ftdr%_rank_highest    -0.010643  0.000000       0.009268  0.013836        0.003116
+48                                  ast%_rank_highest    -0.021402  0.000000       0.012288  0.020544        0.002858
+49                    astd%_mid_overall_rank_weighted    -0.021025 -0.001945       0.015356  0.016535        0.002230
+50                     astd%_rim_overall_rank_highest    -0.044102 -0.003296       0.016129  0.029638       -0.000408
+51   onoff_team_shot:_non_corner_rank_impact_weighted    -0.033781 -0.001548       0.015146  0.014302       -0.001470
+
+With StandardScaler:
+
+                                              feature  elastic_net     lasso  random_forest   xgboost  avg_importance
+0                                   psa_rank_weighted     0.495690  0.149466       0.091919  0.050681        0.196939
+1                                  efg%_rank_weighted     0.349523  0.028418       0.108019  0.076967        0.140732
+2                                  stl%_rank_weighted     0.363247  0.080923       0.035760  0.025057        0.126247
+3                                  tov%_rank_weighted     0.307772  0.070738       0.033942  0.030745        0.110799
+4                                  usage_rank_highest     0.211824  0.048388       0.021076  0.026530        0.076954
+5                                 fgdr%_rank_weighted     0.186650  0.039113       0.017105  0.018635        0.065376
+6                                 foul%_rank_weighted     0.158248  0.032095       0.023689  0.021739        0.058943
+7   onoff_team_halfcourt_putbacks:_pts/miss_rank_w...     0.128457  0.026862       0.015428  0.020536        0.047821
+8                                  blk%_rank_weighted     0.119796  0.021635       0.026527  0.021916        0.047468
+9                   corner_three_rank_impact_weighted     0.122535  0.015888       0.023607  0.019010        0.045260
+10    onoff_team_shot:_short_mid_rank_impact_weighted     0.093257  0.020523       0.015458  0.019441        0.037170
+11                                ftor%_rank_weighted     0.072798  0.012657       0.014505  0.016402        0.029091
+12                        offense:_efg%_rank_weighted     0.065869  0.009799       0.019245  0.015822        0.027684
+13                                 fgor%_rank_highest     0.068410  0.016409       0.009403  0.013341        0.026891
+14                            rim_rank_impact_highest     0.055178  0.004845       0.023234  0.023285        0.026635
+15                     offense:_ft_rate_rank_weighted     0.066022  0.011710       0.013630  0.014309        0.026418
+16    onoff_opp_shot:_non_corner_rank_impact_weighted     0.057520  0.011407       0.013347  0.017085        0.024840
+17  onoff_team_halfcourt_putbacks:_plays/miss_rank...     0.053128  0.009906       0.014196  0.019370        0.024150
+18     onoff_team_shot:_long_mid_rank_impact_weighted     0.046105  0.005692       0.015914  0.018425        0.021534
+19                    offense:_pts/poss_rank_weighted     0.023798  0.000000       0.019840  0.025316        0.017238
+20                        defense:_efg%_rank_weighted     0.036562  0.004833       0.011753  0.014786        0.016983
+21                      long_mid_rank_impact_weighted     0.024010  0.000000       0.014861  0.017722        0.014148
+22                     non_corner_rank_impact_highest     0.021246  0.000000       0.018073  0.013027        0.013086
+23                              ast:usg_rank_weighted     0.007559  0.000000       0.020718  0.023948        0.013056
+24          onoff_team_shot:_rim_rank_impact_weighted     0.006275  0.000000       0.017665  0.020245        0.011046
+25  onoff_opp_transition_off_steals:_pts+/poss_ran...     0.000000 -0.000000       0.017016  0.021719        0.009684
+26  onoff_team_transition_off_live_rebounds:_pts+/...     0.004607  0.000000       0.015009  0.016295        0.008978
+27  onoff_opp_halfcourt_putbacks:_pts/miss_rank_we...     0.000000  0.000000       0.014026  0.020249        0.008569
+28                                  ast%_rank_highest     0.000000  0.000000       0.012134  0.021200        0.008334
+29           onoff_opp_shot:_rim_rank_impact_weighted     0.000000  0.000000       0.012883  0.019334        0.008054
+30                                  ft%_rank_weighted     0.000000 -0.000000       0.015698  0.014979        0.007669
+31  onoff_team_transition_off_steals:_pts+/poss_ra...     0.000556  0.000000       0.015073  0.014955        0.007646
+32  onoff_opp_halfcourt_halfcourt:_oreb%_rank_weig...     0.000000 -0.000000       0.013692  0.015358        0.007263
+33  onoff_opp_halfcourt_putbacks:_plays/miss_rank_...     0.000000 -0.000000       0.013143  0.015359        0.007125
+34                        defense:_orb%_rank_weighted     0.000000 -0.000000       0.014565  0.013710        0.007069
+35                  astd%_three_overall_rank_weighted     0.000000 -0.000000       0.013308  0.014907        0.007054
+36  onoff_opp_shot:_corner_three_rank_impact_weighted     0.000000 -0.000000       0.012589  0.014850        0.006860
+37  onoff_opp_transition_off_live_rebounds:_pts+/p...     0.000000  0.000000       0.013536  0.013248        0.006696
+38                        offense:_tov%_rank_weighted     0.000000  0.000000       0.012092  0.013913        0.006501
+39                     defense:_ft_rate_rank_weighted     0.000000 -0.000000       0.013158  0.012825        0.006496
+40                        offense:_orb%_rank_weighted     0.000000  0.000000       0.011700  0.013876        0.006394
+41                        defense:_tov%_rank_weighted     0.002986  0.000000       0.013771  0.008634        0.006347
+42  onoff_team_shot:_corner_three_rank_impact_highest     0.000000 -0.000000       0.012281  0.013073        0.006339
+43  onoff_team_halfcourt_halfcourt:_oreb%_rank_wei...     0.000000  0.000000       0.010853  0.013702        0.006139
+44     onoff_opp_shot:_short_mid_rank_impact_weighted     0.000000  0.000000       0.011215  0.013160        0.006094
+45                      short_mid_rank_impact_highest     0.000000  0.000000       0.011487  0.012474        0.005990
+46                                 ftdr%_rank_highest     0.001115  0.000000       0.010150  0.010818        0.005521
+47                    defense:_pts/poss_rank_weighted     0.000000  0.000000       0.010894  0.010078        0.005243
+48       onoff_opp_shot:_long_mid_rank_impact_highest    -0.010908 -0.000000       0.012974  0.014443        0.004127
+49   onoff_team_shot:_non_corner_rank_impact_weighted    -0.060121 -0.007451       0.015456  0.017220       -0.008724
+50                    astd%_mid_overall_rank_weighted    -0.084047 -0.012136       0.015326  0.016460       -0.016099
+51                     astd%_rim_overall_rank_highest    -0.148538 -0.027674       0.017056  0.028823       -0.032583
+
+
+With StandardScaler (mean=true, std=false)
+
+Grade rebuilders on different set of criteria than contenders

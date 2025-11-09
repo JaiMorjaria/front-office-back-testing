@@ -6,11 +6,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+import json
+from selenium.webdriver.chrome.service import Service
+import pandas as pd
 
-url = "https://cleaningtheglass.com/stats/players"
 no_data_mapping = {}
-
-
+     
 def get_last_filename_and_rename(save_folder, year, new_filename, selected_season_phase):
     files = glob.glob(save_folder +  '/*.csv')
     if not files:
@@ -21,7 +22,7 @@ def get_last_filename_and_rename(save_folder, year, new_filename, selected_seaso
     os.rename(max_file, new_path)  
     return new_path
 
-def download_by_year(driver, year, selected_season_phase="Regular Season"):    
+def download_by_year(driver, year, selected_season_phase="Regular Season", url="https://cleaningtheglass.com/stats/players"):    
     download_folder = os.getcwd() + f"\\CTG_CSV_Data"
 
     categories = {
@@ -78,7 +79,7 @@ def download_by_year(driver, year, selected_season_phase="Regular Season"):
     if len(no_data_categories) > 0:
         no_data_mapping[f"{year}_{selected_season_phase.replace(' ', '_')}"] = no_data_categories
 
-def main():
+def get_ctg_data(url):
     download_folder = os.getcwd() + "\\CTG_CSV_Data"
     prefs = {
         "download.default_directory": download_folder,
@@ -99,6 +100,57 @@ def main():
         download_by_year(driver, year, "Regular Season")
         download_by_year(driver, year, "Playoffs")
 
+def get_all_playoff_teams(url="https://www.basketball-reference.com/playoffs/series.html"):
+    # Read all HTML tables on the page
+    tables = pd.read_html(url)
+    
+    # The main playoff series table is the first one
+    df = tables[0]
+        
+    # Drop completely blank rows
+    df = df.dropna(how="all")
+    # Clean up columns
+    df.columns = [col[1] if isinstance(col, tuple) else col for col in df.columns]
+    
+    
+    # Translation for team codes that changed
+    team_translations = {
+        "SEA": "OKC",
+        "NJN": "BKN",
+        "NOH": "NOP",
+        "CHA": "CHO"
+    }
+    
+    playoff_teams = {}
+    for _, row in df.iterrows():
+        if pd.isna(row["Yr"]) or row["Yr"] == "Yr" or pd.isna(row["Favorite"]) or pd.isna(row["Underdog"]):
+            continue
+        year_end = int(row["Yr"])
+        row["Yr"] = f"{year_end - 1}-{str(year_end)[-2:]}"
+        year = str(row["Yr"])
+        favorite = row["Favorite"].strip()[:3]
+        underdog = row["Underdog"].strip()[:3]
+        
+        # Normalize acronyms
+        favorite = team_translations.get(favorite, favorite)
+        underdog = team_translations.get(underdog, underdog)
+        
+        # Initialize year list if needed
+        if year not in playoff_teams:
+            playoff_teams[year] = set()
+        
+        playoff_teams[year].update([favorite, underdog])
+    
+    # Convert sets to sorted lists
+    playoff_teams = {
+        year: sorted(list(teams))
+        for year, teams in playoff_teams.items() 
+        if int(year[0:4]) >= 2003
+        and int(year[0:4]) <= 2023
+    }
+    with open("playoff_teams.json", "w") as f:
+        json.dump(playoff_teams, f, indent=4)
+
 if __name__ == "__main__":
-    main()
-    print(no_data_mapping)
+    # get_ctg_data(url = "https://cleaningtheglass.com/stats/players")
+    get_all_playoff_teams(url = "https://www.basketball-reference.com/playoffs/series.html")

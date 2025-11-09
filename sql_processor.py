@@ -1,32 +1,13 @@
 import pandas as pd
 import numpy as np
 import sqlite3
+import json
 from pathlib import Path
 
 common_keys = ['player', 'team', 'age', 'pos', 'min', 'season']
-conf_finals_and_up_corrected = {
-    '2023-24': ['BOS', 'IND', 'DAL', 'MIN'],    
-    '2022-23': ['BOS', 'MIA', 'DEN', 'LAL'],    
-    '2021-22': ['BOS', 'GSW', 'MIA', 'DAL'],    
-    '2020-21': ['MIL', 'PHX', 'ATL', 'LAC'],    
-    '2019-20': ['LAL', 'MIA', 'BOS', 'DEN'],    
-    '2018-19': ['TOR', 'GSW', 'MIL', 'BOS'],    
-    '2017-18': ['CLE', 'GSW', 'HOU', 'BOS'],    
-    '2016-17': ['CLE', 'GSW', 'SAS', 'BOS'],    
-    '2015-16': ['CLE', 'GSW', 'TOR', 'OKC'],    
-    '2014-15': ['GSW', 'CLE', 'ATL', 'HOU'],    
-    '2013-14': ['MIA', 'SAS', 'OKC', 'POR'],    
-    '2012-13': ['MIA', 'SAS', 'OKC', 'MEM'],    
-    '2011-12': ['MIA', 'OKC', 'LAC', 'BOS'],    
-    '2010-11': ['DAL', 'MIA', 'OKC', 'MEM'],    
-    '2009-10': ['LAL', 'BOS', 'PHO', 'ATL'],    
-    '2008-09': ['LAL', 'ORL', 'DEN', 'NOP'],    
-    '2007-08': ['BOS', 'LAL', 'HOU', 'UTA'],    
-    '2006-07': ['CLE', 'DET', 'SAS', 'UTA'],    
-    '2005-06': ['MIA', 'DET', 'DAL', 'PHX'],    
-    '2004-05': ['DET', 'MIA', 'SAS', 'PHX'],    
-    '2003-04': ['DET', 'IND', 'LAL', 'MIN']
-}
+playoff_teams = {}
+with open('playoff_teams.json', 'r') as f:
+    playoff_teams = json.load(f)
 def load_seasons_to_db(merged_csv_dir, db_path='nba_stats.db'):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -50,10 +31,35 @@ def load_seasons_to_db(merged_csv_dir, db_path='nba_stats.db'):
         all_data.append(df)
     
     combined_df = pd.concat(all_data, ignore_index=True)
+    regexes = ["_all_", "all_three", "all_mid", "2p%", "3p%", "sfld%", "ffld%", "and1%", "diff", "%_of_plays", "_freq_", "pts/play", "psa_rank"]
     
-    combined_df.drop(list(combined_df.filter(regex='_all_')), axis=1, inplace=True)
-    combined_df.drop(list(combined_df.filter(regex='all_three')), axis=1, inplace=True)
-    combined_df.drop(list(combined_df.filter(regex='all_mid')), axis=1, inplace=True)
+    # drop all columns matching the regexes
+    for regex in regexes:
+        combined_df.drop(list(combined_df.filter(regex=regex)), axis=1, inplace=True)
+
+    shooting_zones = ['rim', 'short_mid', 'long_mid', 'corner_three', 'non_corner']
+    for zone in shooting_zones:
+        # use regex to find zone frequency and accuracy columns
+        freq_col_regexes = [f'{zone}_frequency', f'_frequency:_{zone}']
+        acc_col_regexes = [f'{zone}_accuracy', f'_team_fg%:_{zone}']
+        freq_cols = []
+        acc_cols = []
+        
+        for i in range(len(freq_col_regexes)):
+            freq_col_regex = freq_col_regexes[i]
+            acc_col_regex = acc_col_regexes[i]
+            print(acc_col_regex)
+            freq_cols += list(combined_df.filter(regex=freq_col_regex))
+            acc_cols += list(combined_df.filter(regex=acc_col_regex))
+            print(list(combined_df.filter(regex=acc_col_regex)))
+        print(zone, freq_cols, acc_cols, "\n")
+        # create zone impact column (geometric mean of frequency and accuracy) using regex to find frequency and accuracy columns
+        for f_col, a_col in zip(freq_cols, acc_cols):
+            impact_col_name = f"{f_col.replace('_frequency','')}_impact"
+            combined_df[impact_col_name] = round(np.sqrt(combined_df[f_col] * combined_df[a_col]), 2)
+            # drop the original frequency and accuracy columns
+            combined_df.drop(columns=[f_col, a_col], inplace=True)
+    
     combined_df.to_sql('player_season_stats', conn, if_exists='replace', index=False)
     
     cursor = conn.cursor()
@@ -74,7 +80,7 @@ def aggregate_to_team_level(db_path='nba_stats.db', output_csv='team_aggregated_
     
     rank_cols = [col for col in df.columns if col not in common_keys]
     
-    print(f"Found {len(rank_cols)} `stat columns to` aggregate")
+    print(f"Found {len(rank_cols)} stat columns to aggregate")
     
     teams = df['team'].unique()
     seasons = df['season'].unique()
@@ -132,13 +138,13 @@ def label_df(df, output_csv='team_aggregated_stats_labeled.csv'):
     for _, row in df.iterrows():
         season = row['Season']
         team = row['Team']
-        if season in conf_finals_and_up_corrected and team in conf_finals_and_up_corrected[season]:
+        if team in playoff_teams[season]:
             labels.append(1)
         else:
             labels.append(0)
-    df['conf_finals_and_up'] = labels
+    df['playoffs'] = labels
     df.to_csv(output_csv, index=False)
-    print(f"\n✓ Labeled data saved to {output_csv}")
+    print(f"\nLabeled data saved to {output_csv}")
     return df
 
 if __name__ == "__main__":
