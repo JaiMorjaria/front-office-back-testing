@@ -5,9 +5,13 @@ import json
 from pathlib import Path
 
 common_keys = ['player', 'team', 'age', 'pos', 'min', 'season']
-playoff_teams = {}
+playoff_teams, conf_finals_teams = {}, {}
 with open('playoff_teams.json', 'r') as f:
     playoff_teams = json.load(f)
+
+with open('conf_finals_teams.json', 'r') as f:
+    conf_finals_teams = json.load(f)
+
 def load_seasons_to_db(merged_csv_dir, db_path='nba_stats.db'):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -31,8 +35,9 @@ def load_seasons_to_db(merged_csv_dir, db_path='nba_stats.db'):
         all_data.append(df)
     
     combined_df = pd.concat(all_data, ignore_index=True)
-    regexes = ["_all_", "all_three", "all_mid", "2p%", "3p%", "sfld%", "ffld%", "and1%", "diff", "%_of_plays", "_freq_", "pts/play", "psa_rank"]
-    
+
+    regexes = ["diff", "%_of_plays", "_freq_", "pts/play", "psa_rank", "_all_", "all_three", "all_mid", "2p%", "3p%"]
+    ""
     # drop all columns matching the regexes
     for regex in regexes:
         combined_df.drop(list(combined_df.filter(regex=regex)), axis=1, inplace=True)
@@ -133,18 +138,29 @@ def aggregate_to_team_level(db_path='nba_stats.db', output_csv='team_aggregated_
     
     return team_df
 
-def label_df(df, output_csv='team_aggregated_stats_labeled.csv'):
+def label_df(df, mode):
+    df = df.drop(['conf_finals', 'playoffs'], errors='ignore')
     labels = []
     for _, row in df.iterrows():
         season = row['Season']
         team = row['Team']
-        if team in playoff_teams[season]:
-            labels.append(1)
-        else:
-            labels.append(0)
-    df['playoffs'] = labels
-    df.to_csv(output_csv, index=False)
-    print(f"\nLabeled data saved to {output_csv}")
+        if mode == 'pretenders':
+            if team in playoff_teams[season]:
+                labels.append(0)
+            else:
+                labels.append(1)
+
+        elif mode == 'contenders':
+            if team in conf_finals_teams[season]:
+                labels.append(1)
+            else:
+                labels.append(0)
+    if mode == 'contenders':
+        df['conf_finals'] = labels
+        df.to_csv("contenders_stats_labeled.csv")
+    elif mode == 'pretenders':
+        df['playoffs'] = labels
+        df.to_csv("pretenders_stats_labeled.csv", index=False)
     return df
 
 if __name__ == "__main__":
@@ -154,6 +170,5 @@ if __name__ == "__main__":
     player_df = load_seasons_to_db(MERGED_CSV_DIR, DB_PATH)
     aggregate_to_team_level()
     read_df = pd.read_csv('team_aggregated_stats.csv')
-    label_df(read_df)
-    duplicates = [col for col in read_df.columns if str(col)[-2] == "."]
-    print(duplicates)
+    label_df(read_df, 'contenders')
+    label_df(read_df, 'pretenders')

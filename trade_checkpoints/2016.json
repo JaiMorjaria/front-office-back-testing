@@ -1,0 +1,2227 @@
+[
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "DET",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "DET"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Reggie Bullock"
+          },
+          {
+            "type": "player",
+            "name": "Danny Granger"
+          },
+          {
+            "type": "player",
+            "name": "Marcus Morris"
+          }
+        ]
+      },
+      {
+        "team": "PHX",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Reggie Bullock"
+          },
+          {
+            "type": "player",
+            "name": "Danny Granger"
+          },
+          {
+            "type": "player",
+            "name": "Marcus Morris"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "DET"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "MIL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jared Dudley"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "WAS"
+          }
+        ]
+      },
+      {
+        "team": "WAS",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "WAS"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jared Dudley"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "PHI",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Luka Mitrovi\u0107"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 1,
+            "team": "PHI"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 1,
+            "team": "SAC"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 1,
+            "team": "PHI"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Art\u016bras Gudaitis"
+          },
+          {
+            "type": "player",
+            "name": "Carl Landry"
+          },
+          {
+            "type": "player",
+            "name": "Nik Stauskas"
+          },
+          {
+            "type": "player",
+            "name": "Jason Thompson"
+          }
+        ]
+      },
+      {
+        "team": "SAC",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Art\u016bras Gudaitis"
+          },
+          {
+            "type": "player",
+            "name": "Carl Landry"
+          },
+          {
+            "type": "player",
+            "name": "Nik Stauskas"
+          },
+          {
+            "type": "player",
+            "name": "Jason Thompson"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Luka Mitrovi\u0107"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 1,
+            "team": "PHI"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 1,
+            "team": "SAC"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 1,
+            "team": "PHI"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "SAC",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Ray McCallum"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "SAS"
+          }
+        ]
+      },
+      {
+        "team": "SAS",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "SAS"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Ray McCallum"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "DAL",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "DAL"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Zaza Pachulia"
+          }
+        ]
+      },
+      {
+        "team": "MIL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Zaza Pachulia"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "DAL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "ATL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Georgios Printezis"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "ATL"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Tiago Splitter"
+          }
+        ]
+      },
+      {
+        "team": "SAS",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Tiago Splitter"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Georgios Printezis"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "ATL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "NYK",
+        "sent": [
+          {
+            "type": "cash"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "NYK"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Kyle O'Quinn"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "ORL"
+          }
+        ]
+      },
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Kyle O'Quinn"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "ORL"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "cash"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "NYK"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "IND",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Roy Hibbert"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "IND"
+          }
+        ]
+      },
+      {
+        "team": "LAL",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "IND"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Roy Hibbert"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "BOS",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Gerald Wallace"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Chris Babb"
+          },
+          {
+            "type": "player",
+            "name": "David Lee"
+          }
+        ]
+      },
+      {
+        "team": "GSW",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Chris Babb"
+          },
+          {
+            "type": "player",
+            "name": "David Lee"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Gerald Wallace"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "IND",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Damjan Rude\u017e"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Chase Budinger"
+          }
+        ]
+      },
+      {
+        "team": "MIN",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Chase Budinger"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Damjan Rude\u017e"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "BKN",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Steve Blake"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Quincy Miller"
+          }
+        ]
+      },
+      {
+        "team": "DET",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Quincy Miller"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Steve Blake"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Maurice Harkless"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "POR"
+          }
+        ]
+      },
+      {
+        "team": "POR",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "POR"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Maurice Harkless"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "BOS",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Perry Jones"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "BOS"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "OKC"
+          }
+        ]
+      },
+      {
+        "team": "OKC",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "BOS"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "OKC"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Perry Jones"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "DEN",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Ty Lawson"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "DEN"
+          },
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 1,
+            "team": "DEN"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Joey Dorsey"
+          },
+          {
+            "type": "player",
+            "name": "Nick Johnson"
+          },
+          {
+            "type": "player",
+            "name": "Kostas Papanikolaou"
+          },
+          {
+            "type": "player",
+            "name": "Pablo Prigioni"
+          }
+        ]
+      },
+      {
+        "team": "HOU",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Joey Dorsey"
+          },
+          {
+            "type": "player",
+            "name": "Nick Johnson"
+          },
+          {
+            "type": "player",
+            "name": "Kostas Papanikolaou"
+          },
+          {
+            "type": "player",
+            "name": "Pablo Prigioni"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Ty Lawson"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "DEN"
+          },
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 1,
+            "team": "DEN"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "CLE",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Rakeem Christmas"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "IND"
+          }
+        ]
+      },
+      {
+        "team": "IND",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "IND"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Rakeem Christmas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "CLE",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Brendan Haywood"
+          },
+          {
+            "type": "player",
+            "name": "Mike Miller"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "CLE"
+          },
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "CLE"
+          }
+        ],
+        "acquired": []
+      },
+      {
+        "team": "POR",
+        "sent": [],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Brendan Haywood"
+          },
+          {
+            "type": "player",
+            "name": "Mike Miller"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "CLE"
+          },
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "CLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "BOS",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "BOS"
+          },
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "BOS"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Zoran Dragi\u0107"
+          }
+        ]
+      },
+      {
+        "team": "MIA",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Zoran Dragi\u0107"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "BOS"
+          },
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "BOS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "MIA",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Shabazz Napier"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "ORL"
+          }
+        ]
+      },
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "ORL"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Shabazz Napier"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "GSW",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Gerald Wallace"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jason Thompson"
+          }
+        ]
+      },
+      {
+        "team": "PHI",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jason Thompson"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Gerald Wallace"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "MEM",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jarnell Stokes"
+          },
+          {
+            "type": "player",
+            "name": "Beno Udrih"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Mario Chalmers"
+          },
+          {
+            "type": "player",
+            "name": "James Ennis"
+          }
+        ]
+      },
+      {
+        "team": "MIA",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Mario Chalmers"
+          },
+          {
+            "type": "player",
+            "name": "James Ennis"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jarnell Stokes"
+          },
+          {
+            "type": "player",
+            "name": "Beno Udrih"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "NOP",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Ish Smith"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "NOP"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "NOP"
+          }
+        ]
+      },
+      {
+        "team": "PHI",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "NOP"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "NOP"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Ish Smith"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "CLE",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Joe Harris"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "CLE"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "ORL"
+          }
+        ]
+      },
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "ORL"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Joe Harris"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "CLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "HOU",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Maarty Leunen"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Sergei Lishouk"
+          },
+          {
+            "type": "player",
+            "name": "Josh Smith"
+          }
+        ]
+      },
+      {
+        "team": "LAC",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Sergei Lishouk"
+          },
+          {
+            "type": "player",
+            "name": "Josh Smith"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Maarty Leunen"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": true,
+    "num_teams": 3,
+    "teams": [
+      {
+        "team": "CHA",
+        "sent": [
+          {
+            "type": "player",
+            "name": "P. J. Hairston"
+          },
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "CHA"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "CHA"
+          },
+          {
+            "type": "player",
+            "name": "Brian Roberts"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Courtney Lee"
+          }
+        ]
+      },
+      {
+        "team": "MEM",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Courtney Lee"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "BRK"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "P. J. Hairston"
+          },
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "CHA"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "CHA"
+          },
+          {
+            "type": "player",
+            "name": "Chris Andersen"
+          },
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "MIA"
+          }
+        ]
+      },
+      {
+        "team": "MIA",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Chris Andersen"
+          },
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "MIA"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Brian Roberts"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "BRK"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "DET",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Ersan \u0130lyasova"
+          },
+          {
+            "type": "player",
+            "name": "Brandon Jennings"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Tobias Harris"
+          }
+        ]
+      },
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Tobias Harris"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Ersan \u0130lyasova"
+          },
+          {
+            "type": "player",
+            "name": "Brandon Jennings"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "PHX",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Markieff Morris"
+          },
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 1,
+            "team": "WAS"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "DeJuan Blair"
+          },
+          {
+            "type": "player",
+            "name": "Kris Humphries"
+          }
+        ]
+      },
+      {
+        "team": "WAS",
+        "sent": [
+          {
+            "type": "player",
+            "name": "DeJuan Blair"
+          },
+          {
+            "type": "player",
+            "name": "Kris Humphries"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Markieff Morris"
+          },
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 1,
+            "team": "WAS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "MIA",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Brian Roberts"
+          },
+          {
+            "type": "pick",
+            "year": "2021",
+            "round": 2,
+            "team": "MIA"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "cash"
+          }
+        ]
+      },
+      {
+        "team": "POR",
+        "sent": [
+          {
+            "type": "cash"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Brian Roberts"
+          },
+          {
+            "type": "pick",
+            "year": "2021",
+            "round": 2,
+            "team": "MIA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "LAC",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Lance Stephenson"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 1,
+            "team": "LAC"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jeff Green"
+          }
+        ]
+      },
+      {
+        "team": "MEM",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jeff Green"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Lance Stephenson"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 1,
+            "team": "LAC"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": true,
+    "num_teams": 3,
+    "teams": [
+      {
+        "team": "CLE",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jared Cunningham"
+          },
+          {
+            "type": "player",
+            "name": "Anderson Varej\u00e3o"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 1,
+            "team": "POR"
+          },
+          {
+            "type": "player",
+            "name": "Channing Frye"
+          }
+        ]
+      },
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Channing Frye"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jared Cunningham"
+          },
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "POR"
+          }
+        ]
+      },
+      {
+        "team": "POR",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 1,
+            "team": "POR"
+          },
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "POR"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Anderson Varej\u00e3o"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "DEN",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Randy Foye"
+          },
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "DEN"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "D. J. Augustin"
+          },
+          {
+            "type": "player",
+            "name": "Steve Novak"
+          },
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "OKC"
+          }
+        ]
+      },
+      {
+        "team": "OKC",
+        "sent": [
+          {
+            "type": "player",
+            "name": "D. J. Augustin"
+          },
+          {
+            "type": "player",
+            "name": "Steve Novak"
+          },
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "OKC"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Randy Foye"
+          },
+          {
+            "type": "pick",
+            "year": "2016",
+            "round": 2,
+            "team": "DEN"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": true,
+    "num_teams": 3,
+    "teams": [
+      {
+        "team": "ATL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Justin Holiday"
+          },
+          {
+            "type": "player",
+            "name": "Shelvin Mack"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Kirk Hinrich"
+          }
+        ]
+      },
+      {
+        "team": "CHI",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Kirk Hinrich"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Justin Holiday"
+          },
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "UTA"
+          }
+        ]
+      },
+      {
+        "team": "UTA",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "UTA"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Shelvin Mack"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "MIA",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jarnell Stokes"
+          },
+          {
+            "type": "cash"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "NOP"
+          }
+        ]
+      },
+      {
+        "team": "NOP",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2018",
+            "round": 2,
+            "team": "NOP"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jarnell Stokes"
+          },
+          {
+            "type": "cash"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "CHI",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Cameron Bairstow"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Spencer Dinwiddie"
+          }
+        ]
+      },
+      {
+        "team": "DET",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Spencer Dinwiddie"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Cameron Bairstow"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "CHI",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Justin Holiday"
+          },
+          {
+            "type": "player",
+            "name": "Derrick Rose"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "CHI"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jos\u00e9 Calder\u00f3n"
+          },
+          {
+            "type": "player",
+            "name": "Jerian Grant"
+          },
+          {
+            "type": "player",
+            "name": "Robin Lopez"
+          }
+        ]
+      },
+      {
+        "team": "NYK",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jos\u00e9 Calder\u00f3n"
+          },
+          {
+            "type": "player",
+            "name": "Jerian Grant"
+          },
+          {
+            "type": "player",
+            "name": "Robin Lopez"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Justin Holiday"
+          },
+          {
+            "type": "player",
+            "name": "Derrick Rose"
+          },
+          {
+            "type": "pick",
+            "year": "2017",
+            "round": 2,
+            "team": "CHI"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "OKC",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Serge Ibaka"
+          },
+          {
+            "type": "player",
+            "name": "Domantas Sabonis"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Ersan \u0130lyasova"
+          },
+          {
+            "type": "player",
+            "name": "Victor Oladipo"
+          }
+        ]
+      },
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Ersan \u0130lyasova"
+          },
+          {
+            "type": "player",
+            "name": "Victor Oladipo"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Serge Ibaka"
+          },
+          {
+            "type": "player",
+            "name": "Domantas Sabonis"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "PHX",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Bogdan Bogdanovi\u0107"
+          },
+          {
+            "type": "player",
+            "name": "Skal Labissi\u00e8re"
+          },
+          {
+            "type": "player",
+            "name": "Georgios Papagiannis"
+          },
+          {
+            "type": "player",
+            "name": "Marquese Chriss"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "DET"
+          }
+        ]
+      },
+      {
+        "team": "SAC",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2020",
+            "round": 2,
+            "team": "DET"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Bogdan Bogdanovi\u0107"
+          },
+          {
+            "type": "player",
+            "name": "Skal Labissi\u00e8re"
+          },
+          {
+            "type": "player",
+            "name": "Georgios Papagiannis"
+          },
+          {
+            "type": "player",
+            "name": "Marquese Chriss"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "BOS",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Deyonta Davis"
+          },
+          {
+            "type": "player",
+            "name": "Rade Zagorac"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 1,
+            "team": "LAC"
+          }
+        ]
+      },
+      {
+        "team": "MEM",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 1,
+            "team": "LAC"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Deyonta Davis"
+          },
+          {
+            "type": "player",
+            "name": "Rade Zagorac"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "LAC",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Cheick Diallo"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "David Michineau"
+          },
+          {
+            "type": "player",
+            "name": "Diamond Stone"
+          }
+        ]
+      },
+      {
+        "team": "NOP",
+        "sent": [
+          {
+            "type": "player",
+            "name": "David Michineau"
+          },
+          {
+            "type": "player",
+            "name": "Diamond Stone"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Cheick Diallo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "GSW",
+        "sent": [
+          {
+            "type": "cash"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Patrick McCaw"
+          }
+        ]
+      },
+      {
+        "team": "MIL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Patrick McCaw"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "cash"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "BKN",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Marcus Paige"
+          },
+          {
+            "type": "cash"
+          }
+        ],
+        "acquired": []
+      },
+      {
+        "team": "UTA",
+        "sent": [],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Marcus Paige"
+          },
+          {
+            "type": "cash"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jake Layman"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "cash"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "POR"
+          }
+        ]
+      },
+      {
+        "team": "POR",
+        "sent": [
+          {
+            "type": "cash"
+          },
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "POR"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jake Layman"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "ATL",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Kay Felder"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "cash"
+          }
+        ]
+      },
+      {
+        "team": "CLE",
+        "sent": [
+          {
+            "type": "cash"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Kay Felder"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "DEN",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Daniel Hamilton"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "cash"
+          }
+        ]
+      },
+      {
+        "team": "OKC",
+        "sent": [
+          {
+            "type": "cash"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Daniel Hamilton"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "is_multi_team": false,
+    "num_teams": 2,
+    "teams": [
+      {
+        "team": "DET",
+        "sent": [
+          {
+            "type": "player",
+            "name": "Jodie Meeks"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "ORL"
+          }
+        ]
+      },
+      {
+        "team": "ORL",
+        "sent": [
+          {
+            "type": "pick",
+            "year": "2019",
+            "round": 2,
+            "team": "ORL"
+          }
+        ],
+        "acquired": [
+          {
+            "type": "player",
+            "name": "Jodie Meeks"
+          }
+        ]
+      }
+    ]
+  }
+]

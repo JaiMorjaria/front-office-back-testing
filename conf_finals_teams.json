@@ -1,0 +1,23 @@
+{
+    "2023-24": ["MIA", "BOS", "DAL", "MIN"],    
+    "2022-23": ["BOS", "MIA", "DEN", "LAL"],    
+    "2021-22": ["BOS", "MIA", "GSW", "DAL"],    
+    "2020-21": ["MIL", "ATL", "PHX", "LAC"],    
+    "2019-20": ["MIA", "BOS", "LAL", "DEN"],    
+    "2018-19": ["TOR", "MIL", "GSW", "POR"],    
+    "2017-18": ["CLE", "BOS", "GSW", "HOU"],    
+    "2016-17": ["CLE", "BOS", "GSW", "SAS"],    
+    "2015-16": ["CLE", "TOR", "GSW", "OKC"],    
+    "2014-15": ["CLE", "ATL", "GSW", "HOU"],    
+    "2013-14": ["MIA", "IND", "SAS", "OKC"],    
+    "2012-13": ["MIA", "IND", "SAS", "MEM"],    
+    "2011-12": ["MIA", "BOS", "OKC", "SAS"],    
+    "2010-11": ["MIA", "CHI", "DAL", "OKC"],    
+    "2009-10": ["BOS", "ORL", "LAL", "PHX"],    
+    "2008-09": ["CLE", "ORL", "LAL", "DEN"],    
+    "2007-08": ["BOS", "DET", "LAL", "SAS"],    
+    "2006-07": ["CLE", "DET", "SAS", "UTA"],    
+    "2005-06": ["MIA", "DET", "DAL", "PHX"],    
+    "2004-05": ["DET", "MIA", "SAS", "PHX"],    
+    "2003-04": ["DET", "IND", "LAL", "MIN"]
+}
